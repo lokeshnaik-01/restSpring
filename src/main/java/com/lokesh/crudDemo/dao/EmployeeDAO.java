@@ -1,3 +1,4 @@
+/*
 package com.lokesh.crudDemo.dao;
 
 import com.lokesh.crudDemo.entity.Employee;
@@ -13,3 +14,4 @@ public interface EmployeeDAO {
 
     void deleteById(int theId);
 }
+*/

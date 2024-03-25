@@ -1,4 +1,6 @@
+/*
 package com.lokesh.crudDemo.rest;
+
 
 import com.lokesh.crudDemo.dao.EmployeeDAO;
 import com.lokesh.crudDemo.entity.Employee;
@@ -60,3 +62,4 @@ public class EmployeeRestController {
         return "Deleted employee id - " + employeeId;
     }
 }
+*/

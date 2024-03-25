@@ -1,3 +1,4 @@
+/*
 package com.lokesh.crudDemo.dao;
 
 import com.lokesh.crudDemo.entity.Employee;
@@ -42,3 +43,4 @@ public class EmployeeDAOJpaImpl implements EmployeeDAO{
         entityManager.remove(theEmployee);
     }
 }
+*/
