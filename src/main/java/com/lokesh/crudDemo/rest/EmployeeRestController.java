@@ -39,6 +39,24 @@ public class EmployeeRestController {
         theEmployee.setId(0);
         Employee dbEmployee = employeeService.save(theEmployee);
         return dbEmployee;
+    }
 
+    @PutMapping("/employees")
+    public Employee updateEmployee(@RequestBody Employee theEmployee) {
+        // we can use the same method to both update and create
+        // in update there is no need to pass the id which needs to be updates
+        // spring will directly pick it up
+        Employee dbEmployee = employeeService.save(theEmployee);
+        return dbEmployee;
+    }
+
+    @DeleteMapping("/employees/{employeeId}")
+    public String deleteEmployee(@PathVariable int employeeId) {
+        Employee tempEmployee = employeeService.findById(employeeId);
+        if(tempEmployee == null) {
+            throw new RuntimeException("Employee id not found - " + employeeId);
+        }
+        employeeService.deleteById(employeeId);
+        return "Deleted employee id - " + employeeId;
     }
 }
